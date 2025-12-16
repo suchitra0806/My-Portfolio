@@ -180,6 +180,22 @@
                     <li>Modular architecture integrating Storage Manager and Buffer Manager layers</li>
                 </ul>
             </div>
+            <div class="projects-card">
+                <h3>B+-Tree Index Manager Implementation</h3>
+                <p>Developed a fully functional B+-tree index manager in C, integrated with a custom storage manager and buffer manager, to support efficient indexing and retrieval of records in a page-based database system. 
+                    Implemented core B+-tree operations including insertion, deletion, search, and range scanning, with each tree node mapped to a fixed-size page on disk.</p>
+                <p><b>Tech Stack: </b>C, File I/O, Buffer Management, Page-Based Storage, Data Structures, Database Indexing</p>
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Implemented B+-tree indexing with configurable fan-out, supporting integer keys and record identifiers</li>
+                    <li>Designed page-based node storage, ensuring each tree node occupies exactly one page and is accessed via the buffer manager</li>
+                    <li>Handled leaf and non-leaf node splits following strict assignment conventions</li>
+                    <li>Implemented underflow handling with redistribution and merge strategies, prioritizing left siblings</li>
+                    <li>Supported sorted tree scans using iterator-style APIs</li>
+                    <li>Built a tree visualization utility using depth-first pre-order traversal for debugging and validation</li>
+                    <li>Ensured buffer consistency and persistence by flushing modified pages to disk on index close</li>
+                </ul>
+            </div>
         </div>
         <br>
         <br>
