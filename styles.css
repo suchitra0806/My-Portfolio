@@ -184,3 +184,26 @@ body {
     text-align: center;
     padding: 50px 20px;
 }
+
+.project-button {
+    background-color: #ece9e5;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .3s ease, color .3s ease;
+    width: 100%;
+}
+
+.project-button:hover {
+    background-color: #341903c9;
+    color: #fff;
+}
