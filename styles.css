@@ -140,7 +140,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
     padding: 1.5rem;
-    text-align: left;
+    text-align: justify;
     width: 300px;
     border: 2px solid black;
 }
@@ -237,7 +237,50 @@ body {
     color: #fff;
 }
 
-/* Responsive rules: tablet and mobile */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.project-tag {
+    background-color: rgba(149, 148, 148, 0.829);
+    border-radius: 12px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border: 1.5px solid black;
+}
+
+.project-tag:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.project-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #000;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-family: "Playwrite NZ Basic", cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #000;
+    color: #fff;
+}
+
 @media (max-width: 1024px) {
     .about-content {
         padding-left: 40px;
@@ -256,6 +299,25 @@ body {
     }
     .navbar-left h2 {
         font-size: 1.2rem;
+    }
+    .project-filter-container {
+        margin-bottom: 30px;
+        gap: 12px;
+    }
+    .projects-cards, .experience-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 20px;
+    }
+    .projects-card, .experience-card {
+        width: 40%; 
+        min-width: 320px; 
+    }
+    .project-button {
+        padding: 12px;
+        font-size: 0.95rem;
     }
 }
 
@@ -307,5 +369,22 @@ body {
         max-width: 320px;
         width: 90%;
         margin: 12px auto;
+    }
+    .project-filter-container {
+        gap: 8px; 
+        margin-bottom: 25px; 
+        padding: 0 10px;
+    }
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        border-width: 1.5px; 
+    }
+    .projects-cards {
+        gap: 1rem; 
+    }
+    .projects-card {
+        width: 100%; 
+        padding: 1.2rem; 
     }
 }

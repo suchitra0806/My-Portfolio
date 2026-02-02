@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400..900&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -51,19 +52,22 @@
             <div class="experience-card">
                 <h3>PwC</h3>
                 <p>
-                    <strong>Cyber Risk and Regulatory Intern | Feb 2025 - Jul 2025</strong>
+                    <strong>Cyber Risk and Regulatory Intern</strong><br>
+                    <small>Feb 2025 - Jul 2025</small>
                 </p>
-                <p><i><u>Tech Stack: Angular.js, Node.js, GitHub, AWS</u></i></p>
-                <ul>
-                    <li>Contributed to financial risk and regulatory project through quantitative framework analysis and compliance data evaluation.</li>
-                    <li>Developed internal Angular-based dashboards and automated reporting systems using Excel.</li>
-                    <li>Utilized AWS cloud technologies and GitHub Actions for seamless CI/CD.</li>
-                </ul>
+                <!-- <p><i><u>Tech Stack: Angular.js, Node.js, GitHub, AWS</u></i></p> -->
+                <p>
+                    During my time at PwC, I was part of the development team building a dedicated financial risk application for Capital One. 
+                    I spent my days in the codebase, building out internal Angular dashboards and automating reporting systems to streamline how the team handled regulatory data. 
+                    To keep the project moving fast, I managed our cloud infrastructure using AWS and set up GitHub actions for CI/CD, ensuring our deployments were stable and secure. 
+                    It was a great experience balancing quantitative framework analysis with real-world software engineering for a high-profile client.
+                </p>
             </div>
             <div class="experience-card">
                 <h3>vTitan Corporation Pvt Ltd</h3>
                 <p>
-                    <strong>Full Stack Development Intern | Jul 2024</strong>
+                    <strong>Full Stack Development Intern</strong><br>
+                    <small>Jul 2024</small>
                 </p>
                 <p><i><u>Tech Stack: React.js, Node.js, Java, Spring Boot, MySQL, GitHub</u></i></p>
                 <ul>
@@ -75,7 +79,8 @@
             <div class="experience-card">
                 <h3>Bluestock Fintech</h3>
                 <p>
-                    <strong>Software Developer Intern | Jul 2024 - Aug 2024</strong>
+                    <strong>Software Developer Intern</strong><br>
+                    <small>Jul 2024 - Aug 2024</small>
                 </p>
                 <p><i><u>Tech Stack: HTML, Django, Boot Strap</u></i></p>
                 <ul>
@@ -87,7 +92,8 @@
             <div class="experience-card">
                 <h3>PwC - Trainee</h3>
                 <p>
-                    <strong>Cyber Risk and Regulatory Launchpad Program | Feb 2024 - Jul 2024</strong>
+                    <strong>Cyber Risk and Regulatory Launchpad Program</strong><br>
+                    <small>Feb 2024 - Jul 2024</small>
                 </p>
                 <p><i><u>Tech Stack: Python, Java, Oracle, GitHub, Cybersecurity</u></i></p>
                 <ul>
@@ -101,7 +107,8 @@
             <div class="experience-card">
                 <h3>Cognifyz Technologies</h3>
                 <p>
-                    <strong>Python Development Intern | Jul 2023 - Aug 2023</strong>
+                    <strong>Python Development Intern</strong><br>
+                    <small>Jul 2023 - Aug 2023</small>
                 </p>
                 <p><i><u>Tech Stack: Python</u></i></p>
                 <ul>
@@ -113,7 +120,8 @@
             <div class="experience-card">
                 <h3>LetsGrowMore</h3>
                 <p>
-                    <strong>Java Development Intern | Jul 2024 - Aug 2024</strong>
+                    <strong>Java Development Intern</strong><br>
+                    <small>Jul 2024 - Aug 2024</small>
                 </p>
                 <p><i><u>Tech Stack: Java</u></i></p>
                 <ul>
@@ -133,43 +141,122 @@
         <br>
         <h1>Projects</h1>
         <br>
+        <div class="project-filter-container">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('ai')">Artificial Intelligence</button>
+            <button class="filter-btn" onclick="filterProjects('fullstack')">Full Stack</button>
+            <button class="filter-btn" onclick="filterProjects('database')">Database</button>
+            <button class="filter-btn" onclick="filterProjects('analytics')">Data Analytics</button>
+        </div>
         <div class="projects-cards">
-            <div class="projects-card">
+            <div class="projects-card" data-category="ai">
                 <h3>RuralReach</h3>
+                <div class="tech-stack">
+                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-tensorflow-original"></i>
+                    <i class="devicon-numpy-plain"></i>
+                    <i class="devicon-pandas-plain"></i>
+                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">DNN</span>
+                    <span class="project-tag">Contextual AI</span>
+                </div>
                 <p>This project was all about making AI understand context. Me and my friend built a deep learning system that doesn't just look at raw data, but also considers the "why" and "where", like environmental and situational cues, to predict behaviors more accurately. 
                     We handled the entire pipeline ourselves, from engineering the features to training the neural networks, making sure the model stayed sharp even when the situation changed.</p>
             </div>
-            <div class="projects-card">
+            <div class="projects-card" data-category="fullstack">
                 <h3>Full Stack Student Application Development</h3>
+                <div class="tech-stack">
+                    <i class="devicon-java-plain"></i>
+                    <i class="devicon-spring-plain"></i>
+                    <i class="devicon-react-plain"></i>
+                    <i class="devicon-mysql-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">JSON</span>
+                    <span class="project-tag">REST API</span>
+                </div>
                 <p>This is a full-stack student management system I built to bridge the gap between backend and frontend. I wanted to show how a Spring Boot API and a React UI can work together perfectly on a single port. 
                     I did the whole thing from scratch, designing the RESTful architecture, building the component-based interface, and making sure the state management was smooth for every add, update, and delete.</p>
                 <a href="https://github.com/suchitra0806/Student-application-frontend" class="project-button">View Frontend Code</a>
                 <a href="https://github.com/suchitra0806/Student-application-backend" class="project-button">View Backend Code</a>
             </div>
-            <div class="projects-card">
+            <div class="projects-card" data-category="database">
                 <h3>Record Manager</h3>
+                <div class="tech-stack">
+                    <i class="devicon-c-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">File I/O</span>
+                    <span class="project-tag">Memory Management</span>
+                    <span class="project-tag">Data Structures</span>
+                </div>
                 <p>I wanted to dive deep into the guts of a database. I built a record manager in C from the ground up to handle data tables with fixed schemas. I did the hard work of implementing the core logic, like how records are inserted, deleted, and scanned, using my own custom data structures. 
                     I designed the page layouts and integrated a buffer manager to make sure accessing data was as fast and efficient as possible.</p>
             </div>
-            <div class="projects-card">
+            <div class="projects-card" data-category="database">
                 <h3>B+-Tree Index Manager Implementation</h3>
+                <div class="tech-stack">
+                    <i class="devicon-c-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">File I/O</span>
+                    <span class="project-tag">Memory Management</span>
+                    <span class="project-tag">Data Structures</span>
+                </div>
                 <p>This was probably one of my biggest coding challenges yet. I built a fully functional b+-tree index manager in c to help a database find and retrieve records without breaking a sweat. I did the heavy lifting of mapping tree nodes to disk pages and implementing all the core logic, like splits, merges, and range scans. 
                     I also integrated it with a custom buffer manager to make sure the whole system was fast, efficient, and actually persistent.</p>
             </div>
-            <div class="projects-card">
-                <h3>Weather Data: EDA</h3>
+            <div class="projects-card" data-category="analytics">
+                <h3>Weather Analysis</h3>
+                <div class="tech-stack">
+                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-jupyter-plain"></i>
+                    <i class="devicon-pandas-plain"></i>
+                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Exploratory Data Analysis</span>
+                </div>
                 <p>This project started with a massive, messy pile of atmospheric data and a lot of questions. I built a Python pipeline to clean everything up and get it ready for some serious time-series analysis. I visualized using Matplotlib and Seaborn to see if I could spot seasonal trends or weird atmospheric shifts. 
                     It was basically me playing detective with data to find patterns and anomalies that aren't obvious at first glance.</p>
                 <a href="https://github.com/suchitra0806/EDA-On-Weather-Dataset" class="project-button">View Project</a>
             </div>
-            <div class="projects-card">
+            <div class="projects-card" data-category="ai">
                 <h3>Semantic Talent Indexer</h3>
-                <p>This is my take on making hiring smarter and more secure. I built a RAG (retrieval-augmented generation) system that uses semantic search to find the best talent, moving way beyond basic keyword matching. I did the work of setting up a local inference pipeline using Ollama and Llama models so that all the sensitive candidate data stays private and on-premises. 
+                <div class="tech-stack">
+                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">NLP</span>
+                    <span class="project-tag">Ollama</span>
+                    <span class="project-tag">Semantic Search</span>
+                </div>
+                <p>This is my take on making hiring smarter and more secure. I built a RAG (retrieval-augmented generation) system that uses semantic search to find the best talent, moving way beyond basic keyword matching. I did the work of setting up a local inference pipeline using Ollama so that all the sensitive candidate data stays private and on-premises. 
                     It was a huge win in showing how we can use large language models (LLMs) to understand the actual context of someone's career, not just their job titles.</p>
                 <a href="https://github.com/suchitra0806/semantic-talent-indexer" class="project-button">View Project</a>
             </div>
-            <div class="projects-card">
+            <div class="projects-card" data-category="ai">
                 <h3>HealthPredict</h3>
+                <div class="tech-stack">
+                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-jupyter-plain"></i>
+                    <i class="devicon-pandas-plain"></i>
+                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Healthcare AI</span>
+                    <span class="project-tag">Patient Care</span>
+                    <span class="project-tag">Predictive Analytics</span>
+                </div>
                 <p>This project uses machine learning to predict if a patient is likely to miss their medical appointment. I built a random forest model to spot potential "no-shows," helping doctors optimize their schedules and make sure more people actually get the care they need. 
                     I did the work of balancing the data and prioritizing recall because, at the end of the day, missing a patient who needs help is a bigger deal than a false alarm.</p>
                 <a href="https://github.com/suchitra0806/med-no-show-prediction" class="project-button">View Project</a>
@@ -185,5 +272,6 @@
         <p>Send me an email to know more about me or discuss opportunities.</p>
         <a href="mailto:suchiraj0806@gmail.com" class="email-button">Email Me</a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
