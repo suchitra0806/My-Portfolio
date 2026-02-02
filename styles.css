@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    background-color: #d6b58c;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 
 .navbar-button {
     align-items: center;
-    background-color: #714837;
+    background-color: black;
     border: 2px solid #2b221c;
     color: antiquewhite;
     display: inline;
@@ -31,7 +31,7 @@ body {
 }
 
 .navbar-button:hover {
-    color: #2b221c;
+    color: maroon;
 }
 
 .navbar-left {
@@ -49,9 +49,9 @@ body {
 
 .navbar-right a {
     align-items: center;
-    background-color: #714837;
-    border: 2px solid #2b221c;
-    color: antiquewhite;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
     display: inline;
     padding: 5px 12px;
     border-radius: 20px;
@@ -68,7 +68,7 @@ body {
     gap: 30px;
     padding-left: 250px;
     padding-top: 100px;
-    background-color: bisque;
+    background-color: white;
 }
 
 .about-text {
@@ -119,16 +119,22 @@ body {
 }
 
 .experience-card {
-    background-color: #EDD1B7;
+    background-color: rgba(149, 148, 148, 0.829);
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
     padding: 1.5rem;
     text-align: left;
     width: 300px;
+    border: 2px solid black;
 }
 
 .experience {
-    background-color: #d6b58c;
+    background-color: white;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 12px black;
 }
 
 .projects h1 {
@@ -144,24 +150,30 @@ body {
 }
 
 .projects-card {
-    background-color: #EDD1B7;
+    background-color: rgba(149, 148, 148, 0.829);
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
     padding: 1.5rem;
     text-align: left;
     width: 300px;
+    border: 2px solid black;
+}
+
+.projects-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 12px black;
 }
 
 .projects {
-    background-color: #8f775a;
+    background-color: white;
 }
 
 .email-button {
-    background-color: #ece9e5;
+    background-color: white;
     border: 2px solid #000;
     border-radius: 25px;
     box-sizing: border-box;
-    color: #a00a0a;
+    color: black;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -175,12 +187,12 @@ body {
 }
 
 .email-button:hover {
-    background-color: #6d0303;
+    background-color: black;
     color: #fff;
 }
 
 .contact {
-    background-color: #d6b58c;
+    background-color: white;
     text-align: center;
     padding: 50px 20px;
 }
@@ -204,6 +216,6 @@ body {
 }
 
 .project-button:hover {
-    background-color: #341903c9;
+    background-color: black;
     color: #fff;
 }
