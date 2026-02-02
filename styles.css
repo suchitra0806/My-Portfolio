@@ -304,6 +304,9 @@ body {
         margin-bottom: 30px;
         gap: 12px;
     }
+    .filter-btn {
+        color:#000;
+    }
     .projects-cards, .experience-cards {
         display: flex;
         flex-wrap: wrap;
@@ -379,6 +382,7 @@ body {
         padding: 6px 12px;
         font-size: 0.85rem;
         border-width: 1.5px; 
+        color:#000;
     }
     .projects-cards {
         gap: 1rem; 
