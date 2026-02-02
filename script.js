@@ -8,10 +8,8 @@ function filterProjects(category) {
             btn.classList.add('active');
         }
     });
-
     cards.forEach(card => {
         card.style.opacity = '0';
-        
         setTimeout(() => {
             if (category === 'all' || card.getAttribute('data-category') === category) {
                 card.style.display = 'block';
