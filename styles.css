@@ -130,7 +130,7 @@ body {
 .experience-cards {
     flex-direction: row;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -161,7 +161,7 @@ body {
 .projects-cards {
     flex-direction: row;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -170,8 +170,8 @@ body {
     background-color: rgba(149, 148, 148, 0.829);
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
-    padding: 1.5rem;
-    text-align: left;
+    padding: 2rem;
+    text-align: justify;
     width: 300px;
     border: 2px solid black;
 }
