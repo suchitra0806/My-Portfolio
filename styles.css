@@ -303,9 +303,7 @@ body {
     .project-filter-container {
         margin-bottom: 30px;
         gap: 12px;
-    }
-    .filter-btn {
-        color:#000;
+        justify-content: center;
     }
     .projects-cards, .experience-cards {
         display: flex;
@@ -321,6 +319,17 @@ body {
     .project-button {
         padding: 12px;
         font-size: 0.95rem;
+    }
+    .filter-btn {
+        color: #000;
+        text-decoration: none;
+        border: 2px solid #000;
+        background-color: #fff;
+    }
+
+    .filter-btn.active {
+        background-color: #000;
+        color: #fff;
     }
 }
 
@@ -382,7 +391,13 @@ body {
         padding: 6px 12px;
         font-size: 0.85rem;
         border-width: 1.5px; 
-        color:#000;
+        color: #000; 
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .filter-btn.active {
+        color: #fff; 
+        background-color: #000;
     }
     .projects-cards {
         gap: 1rem; 
