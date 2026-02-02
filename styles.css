@@ -46,7 +46,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+}
+
+.navbar-main {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar-right {
@@ -106,8 +114,9 @@ body {
 .about-image img {
     border-radius: 20px;
     box-shadow: 0 4px 8px #0000001a;
-    height: 500px;
-    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
 }
 
 .separator {
@@ -226,4 +235,77 @@ body {
 .project-button:hover {
     background-color: black;
     color: #fff;
+}
+
+/* Responsive rules: tablet and mobile */
+@media (max-width: 1024px) {
+    .about-content {
+        padding-left: 40px;
+        padding-top: 60px;
+        gap: 20px;
+    }
+    .about-text {
+        max-width: 60%;
+        font-size: 1rem;
+    }
+    .about-image img {
+        max-height: 400px;
+    }
+    .navbar {
+        padding: 10px 4vh;
+    }
+    .navbar-left h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 4vw;
+    }
+    .navbar-left, .navbar-main, .navbar-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .navbar-button, .navbar-right a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .about-content {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .about-text {
+        max-width: 100%;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .about-image {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .about-image img {
+        width: 80%;
+        height: auto;
+        max-width: 320px;
+        max-height: 360px;
+    }
+    .experience-card, .projects-card {
+        width: 90%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    .email-button, .project-button {
+        max-width: 320px;
+        width: 90%;
+        margin: 12px auto;
+    }
 }
