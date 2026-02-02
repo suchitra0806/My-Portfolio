@@ -2,11 +2,19 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: "Playwrite NZ Basic", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; /* choosing a standard weight */
+    font-style: normal;
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: "Playwrite NZ Basic", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; /* choosing a standard weight */
+    font-style: normal;
 }
 
 .navbar {
@@ -31,7 +39,7 @@ body {
 }
 
 .navbar-button:hover {
-    color: maroon;
+    color: rgb(154, 139, 139);
 }
 
 .navbar-left {
@@ -66,7 +74,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
-    padding-left: 250px;
+    padding-left: 150px;
     padding-top: 100px;
     background-color: white;
 }
@@ -91,14 +99,14 @@ body {
 
 .about-image {
     padding: 0;
-    padding-right: 300px;
+    padding-right: 100px;
     padding-bottom: 70px;
 }
 
 .about-image img {
     border-radius: 20px;
     box-shadow: 0 4px 8px #0000001a;
-    height: 300px;
+    height: 500px;
     width: auto;
 }
 
