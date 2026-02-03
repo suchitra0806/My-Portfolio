@@ -20,3 +20,30 @@ function filterProjects(category) {
         }, 100);
     });
 }
+
+const dot = document.querySelector('.cursor-dot');
+const outline = document.querySelector('.cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    dot.style.left = `${posX}px`;
+    dot.style.top = `${posY}px`;
+
+    outline.style.left = `${posX}px`;
+    outline.style.top = `${posY}px`;
+});
+
+const links = document.querySelectorAll('a, button, .tech-stack i, .filter-btn');
+
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        outline.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+    });
+    link.addEventListener('mouseleave', () => {
+        outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        outline.style.backgroundColor = 'transparent';
+    });
+});
