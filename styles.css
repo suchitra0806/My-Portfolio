@@ -30,18 +30,19 @@ body {
     border-radius: 50%;
     z-index: 9999;
     transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
 }
 
 .cursor-dot {
     width: 8px;
     height: 8px;
-    background-color: #000;
+    background-color: white;
 }
 
 .cursor-outline {
     width: 40px;
     height: 40px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
     transition: all 0.15s ease-out;
 }
 
@@ -285,6 +286,26 @@ body {
     color: #fff;
 }
 
+.tech-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tech-stack-tag {
+    background-color: rgba(237, 235, 235, 0.829);
+    border-radius: 12px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border: 1.5px solid black;
+}
+
+.tech-stack-tag:hover {
+    background-color: black;
+    color: #fff;
+}
+
 .project-filter-container {
     display: flex;
     justify-content: center;
@@ -354,10 +375,24 @@ body {
         border: 2px solid #000;
         background-color: #fff;
     }
-
     .filter-btn.active {
         background-color: #000;
         color: #fff;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none !important;
+    }
+    body {
+        cursor: auto !important;
+    }
+    .tech-stack-tags {
+        gap: 10px; 
+        justify-content: flex-start; 
+    }
+    .tech-stack-tag {
+        padding: 8px 14px; 
+        font-size: 0.85rem;
+        border-width: 2px; 
     }
 }
 
@@ -433,5 +468,22 @@ body {
     .projects-card {
         width: 100%; 
         padding: 1.2rem; 
+    }
+    .cursor-dot, .cursor-outline {
+        display: none !important;
+    }
+    body {
+        cursor: auto !important;
+    }
+    .tech-stack-tags {
+        gap: 6px;
+        margin-top: 15px;
+        justify-content: center; 
+    }
+    .tech-stack-tag {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        border-width: 1px;
+        white-space: nowrap; 
     }
 }

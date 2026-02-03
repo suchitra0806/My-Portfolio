@@ -40,7 +40,7 @@ const links = document.querySelectorAll('a, button, .tech-stack i, .filter-btn')
 links.forEach(link => {
     link.addEventListener('mouseenter', () => {
         outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        outline.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        outline.style.backgroundColor = 'white';
     });
     link.addEventListener('mouseleave', () => {
         outline.style.transform = 'translate(-50%, -50%) scale(1)';
