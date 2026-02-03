@@ -31,6 +31,7 @@ body {
     z-index: 9999;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    z-index: 99999 !important;
 }
 
 .cursor-dot {
@@ -165,7 +166,7 @@ body {
 }
 
 .experience-card {
-    background-color: rgba(149, 148, 148, 0.829);
+    background-color: rgba(193, 191, 191, 0.829);
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
     padding: 1.5rem;
@@ -175,7 +176,7 @@ body {
 }
 
 .experience {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .experience-card:hover {
@@ -196,7 +197,7 @@ body {
 }
 
 .projects-card {
-    background-color: rgba(149, 148, 148, 0.829);
+    background-color: rgba(193, 191, 191, 0.829);
     border-radius: 8px;
     box-shadow: 0 4px 6px #0000001a;
     padding: 2rem;
@@ -244,11 +245,11 @@ body {
 }
 
 .project-button {
-    background-color: #ece9e5;
-    border: 2px solid #000;
+    background-color: white;
+    border: 2px solid black;
     border-radius: 25px;
     box-sizing: border-box;
-    color: #000000;
+    color: black;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -328,6 +329,67 @@ body {
 .filter-btn:hover, .filter-btn.active {
     background: #000;
     color: #fff;
+}
+
+.mode-toggle-container {
+    position: fixed;
+    bottom: 30px;
+    right: -70px;
+    transform: translateX(-50%);
+    z-index: 99998;
+    animation: floaty 4s ease-in-out infinite;
+}
+
+@keyframes corner-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); } /* gentle vertical bob */
+}
+
+@keyframes floaty {
+    0% { transform: translate(-50%, 0px); }
+    50% { transform: translate(-50%, -10px); } /* bobs up 10px */
+    100% { transform: translate(-50%, 0px); }
+}
+
+.toggle-track {
+    background: rgba(255, 255, 255, 0.8); /* slight transparency for that watery look */
+    backdrop-filter: blur(8px); /* blurs the content behind it */
+    border: 2px solid black;
+    border-radius: 30px;
+    display: flex;
+    padding: 5px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Playwrite NZ Basic", cursive;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.toggle-btn.active {
+    color: white;
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: black;
+    border-radius: 25px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.non-tech-active .toggle-thumb {
+    transform: translateX(100%);
 }
 
 @media (max-width: 1024px) {

@@ -47,3 +47,48 @@ links.forEach(link => {
         outline.style.backgroundColor = 'transparent';
     });
 });
+
+function setMode(mode) {
+    const track = document.querySelector('.toggle-track');
+    const btns = document.querySelectorAll('.toggle-btn');
+    
+    // these are the sections we want to swap
+    const techContent = document.querySelectorAll('.experience, .projects');
+    const personalContent = document.querySelector('#personal-section');
+
+    if (mode === 'dark' || mode === 'non-tech') {
+        // ui toggle state
+        track.classList.add('non-tech-active');
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+        
+        // hide tech, show personal
+        techContent.forEach(el => el.style.display = 'none');
+        if (personalContent) {
+            personalContent.style.display = 'block';
+        }
+    } else {
+        // ui toggle state
+        track.classList.remove('non-tech-active');
+        btns[1].classList.remove('active');
+        btns[0].classList.add('active');
+        
+        // show tech, hide personal
+        techContent.forEach(el => el.style.display = 'block');
+        if (personalContent) {
+            personalContent.style.display = 'none';
+        }
+    }
+}
+
+// this ensures the cursor reacts to the new toggle buttons too
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+        outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        outline.style.backgroundColor = 'white';
+    });
+    btn.addEventListener('mouseleave', () => {
+        outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        outline.style.backgroundColor = 'transparent';
+    });
+});
