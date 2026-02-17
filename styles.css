@@ -153,6 +153,37 @@ body {
     border-top: 5px solid black;
 }
 
+.extracurriculars h1 {
+    text-align: center;
+}
+
+.extracurriculars-cards {
+    flex-direction: row;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.extracurriculars-card {
+    background-color: rgba(193, 191, 191, 0.829);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #0000001a;
+    padding: 1.5rem;
+    text-align: justify;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.extracurriculars {
+    background-color: rgb(255, 255, 255);
+}
+
+.extracurriculars-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 12px black;
+}
+
 .experience h1 {
     text-align: center;
 }
@@ -417,14 +448,14 @@ body {
         gap: 12px;
         justify-content: center;
     }
-    .projects-cards, .experience-cards {
+    .projects-cards, .experience-cards, .extracurriculars-cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
         padding: 0 20px;
     }
-    .projects-card, .experience-card {
+    .projects-card, .experience-card, .extracurriculars-card {
         width: 40%; 
         min-width: 320px; 
     }
@@ -498,7 +529,7 @@ body {
         max-width: 320px;
         max-height: 360px;
     }
-    .experience-card, .projects-card {
+    .experience-card, .projects-card, .extracurriculars-card {
         width: 90%;
         max-width: 480px;
         margin: 0 auto;
