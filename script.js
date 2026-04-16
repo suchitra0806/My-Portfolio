@@ -1,93 +1,125 @@
+/* ─── Dark Mode ─────────────────────────────────────────────────────────── */
+const html = document.documentElement;
+const darkToggle = document.getElementById('darkModeToggle');
+
+// Default to dark theme for the gaming aesthetic
+if (!localStorage.getItem('theme')) {
+    html.setAttribute('data-theme', 'dark');
+} else {
+    html.setAttribute('data-theme', localStorage.getItem('theme'));
+}
+
+darkToggle.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+});
+
+/* ─── Scroll Progress + Navbar ──────────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('scrollProgress').style.width =
+        `${docHeight > 0 ? (scrollTop / docHeight) * 100 : 0}%`;
+});
+
+/* ─── Boot Sequence ─────────────────────────────────────────────────────── */
+const bootLines = [
+    '> BOOTING PORTFOLIO.EXE...',
+    '> LOADING PLAYER DATA...',
+    '> NAME.....: SUCHITRA RAJKUMAR',
+    '> CLASS....: SOFTWARE ENGINEER',
+    '> SPEC.....: AI + FULL STACK',
+    '> BASE.....: ILLINOIS TECH, CHICAGO',
+    '> QUEST....: SUMMER \'26 INTERNSHIP',
+    '> STATUS...: [ ONLINE ]',
+];
+
+const bootContainer = document.getElementById('bootLines');
+const termCursor   = document.getElementById('termCursor');
+const heroCtas     = document.getElementById('heroCtas');
+
+let lineIdx = 0;
+
+function showNextLine() {
+    if (lineIdx >= bootLines.length) {
+        // All lines shown — reveal CTAs
+        termCursor.style.display = 'none';
+        heroCtas.style.transition = 'opacity 0.5s ease';
+        heroCtas.style.opacity = '1';
+        return;
+    }
+
+    const line = document.createElement('span');
+    line.className = 'terminal-line';
+    line.textContent = bootLines[lineIdx];
+
+    // Green highlight for the STATUS line
+    if (bootLines[lineIdx].includes('ONLINE')) {
+        line.style.color = 'var(--green)';
+        line.style.textShadow = '0 0 8px var(--green)';
+    }
+
+    bootContainer.appendChild(line);
+    lineIdx++;
+
+    // Stagger: faster for early lines, pause after LOADING line
+    const delay = lineIdx === 2 ? 300 : 160;
+    setTimeout(showNextLine, delay);
+}
+
+// Small initial pause before boot starts
+setTimeout(showNextLine, 600);
+
+/* ─── Scroll Reveal ─────────────────────────────────────────────────────── */
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+/* ─── Project Filter ────────────────────────────────────────────────────── */
 function filterProjects(category) {
-    const cards = document.querySelectorAll('.projects-card');
+    const cards   = document.querySelectorAll('.projects-card');
     const buttons = document.querySelectorAll('.filter-btn');
 
     buttons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('onclick').includes(category)) {
-            btn.classList.add('active');
-        }
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${category}'`));
     });
+
     cards.forEach(card => {
+        const match = category === 'all' || card.getAttribute('data-category') === category;
         card.style.opacity = '0';
         setTimeout(() => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-                card.style.display = 'block';
-                setTimeout(() => card.style.opacity = '1', 10);
-            } else {
-                card.style.display = 'none';
-            }
+            card.style.display = match ? 'flex' : 'none';
+            if (match) setTimeout(() => { card.style.opacity = '1'; card.style.transition = 'opacity 0.3s ease'; }, 10);
         }, 100);
     });
 }
 
-const dot = document.querySelector('.cursor-dot');
+/* ─── Custom Cursor ─────────────────────────────────────────────────────── */
+const dot     = document.querySelector('.cursor-dot');
 const outline = document.querySelector('.cursor-outline');
 
 window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    dot.style.left = `${posX}px`;
-    dot.style.top = `${posY}px`;
-
-    outline.style.left = `${posX}px`;
-    outline.style.top = `${posY}px`;
+    dot.style.left     = `${e.clientX}px`;
+    dot.style.top      = `${e.clientY}px`;
+    outline.style.left = `${e.clientX}px`;
+    outline.style.top  = `${e.clientY}px`;
 });
 
-const links = document.querySelectorAll('a, button, .tech-stack i, .filter-btn');
-
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        outline.style.backgroundColor = 'white';
+document.querySelectorAll('a, button, .filter-btn, .skill-icon, .project-tag, .tech-stack-tag').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        outline.style.transform = 'translate(-50%, -50%) scale(1.6)';
+        outline.style.backgroundColor = 'rgba(0, 255, 65, 0.15)';
     });
-    link.addEventListener('mouseleave', () => {
-        outline.style.transform = 'translate(-50%, -50%) scale(1)';
-        outline.style.backgroundColor = 'transparent';
-    });
-});
-
-function setMode(mode) {
-    const track = document.querySelector('.toggle-track');
-    const btns = document.querySelectorAll('.toggle-btn');
-    
-    // these are the sections we want to swap
-    const techContent = document.querySelectorAll('.experience, .projects');
-    const personalContent = document.querySelector('#personal-section');
-
-    if (mode === 'dark' || mode === 'non-tech') {
-        // ui toggle state
-        track.classList.add('non-tech-active');
-        btns[0].classList.remove('active');
-        btns[1].classList.add('active');
-        
-        // hide tech, show personal
-        techContent.forEach(el => el.style.display = 'none');
-        if (personalContent) {
-            personalContent.style.display = 'block';
-        }
-    } else {
-        // ui toggle state
-        track.classList.remove('non-tech-active');
-        btns[1].classList.remove('active');
-        btns[0].classList.add('active');
-        
-        // show tech, hide personal
-        techContent.forEach(el => el.style.display = 'block');
-        if (personalContent) {
-            personalContent.style.display = 'none';
-        }
-    }
-}
-
-// this ensures the cursor reacts to the new toggle buttons too
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        outline.style.backgroundColor = 'white';
-    });
-    btn.addEventListener('mouseleave', () => {
+    el.addEventListener('mouseleave', () => {
         outline.style.transform = 'translate(-50%, -50%) scale(1)';
         outline.style.backgroundColor = 'transparent';
     });
