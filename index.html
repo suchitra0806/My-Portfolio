@@ -1,44 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suchitra Rajkumar Portfolio</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Suchitra Rajkumar // Portfolio.exe</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400..900&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-    <div class="navbar">
+    <div class="scanlines"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="navbar-left">
-            <h2>Suchitra Rajkumar</h2>
+            <span class="navbar-logo">SR<span class="green">.EXE</span></span>
         </div>
         <div class="navbar-main">
-            <a href="" class="navbar-button">Home</a>
-            <a href="#about" class="navbar-button">About</a>
-            <a href="#experience" class="navbar-button">Experience</a>
-            <a href="#projects" class="navbar-button">Projects</a>
-            <a href="#contact" class="navbar-button">Contact</a>
+            <a href="#home" class="navbar-button">HOME</a>
+            <a href="#about" class="navbar-button">ABOUT</a>
+            <a href="#skills" class="navbar-button">SKILLS</a>
+            <a href="#experience" class="navbar-button">EXP</a>
+            <a href="#projects" class="navbar-button">QUESTS</a>
+            <a href="#contact" class="navbar-button">CONTACT</a>
         </div>
-        <div class="navbar-right"> 
-            <a href="https://github.com/suchitra0806" class="navbar-button">GitHub</a>
-            <a href="https://www.linkedin.com/in/suchitra-rajkumar8/" class="navbar-button">LinkedIn</a>
+        <div class="navbar-right">
+            <a href="https://github.com/suchitra0806" class="navbar-button" target="_blank">GH</a>
+            <a href="https://www.linkedin.com/in/suchitra-rajkumar8/" class="navbar-button" target="_blank">LI</a>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
         </div>
-    </div>
-    <div class="separator"></div>
-    <div class="about-me" id="about">
-        <div class="about-content">
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">// PORTFOLIO.EXE &nbsp;—&nbsp; v2026</p>
+            <h1 class="hero-name">SUCHITRA<br>RAJKUMAR</h1>
+            <div class="hero-terminal">
+                <div class="terminal-lines" id="bootLines"></div>
+                <span class="terminal-cursor" id="termCursor">█</span>
+            </div>
+            <div class="hero-ctas" id="heroCtas" style="opacity:0;">
+                <a href="#about" class="btn-pixel primary">► START</a>
+                <a href="#contact" class="btn-pixel secondary">CONTACT</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">▼ SCROLL ▼</div>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- About / Player Profile -->
+    <section class="about-me" id="about">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 01</span>
+            <h2 class="section-title">PLAYER PROFILE</h2>
+        </div>
+        <div class="about-content scroll-reveal">
             <div class="about-text">
-                <h2>Hey, it's Suchitra...</h2>
-                <p>I'm a computer science master's student at Illinois Tech who loves building things from my imagination. If I think about something, I'll probably try coding it. My background is in software engineering, but I've fallen down the AI rabbit hole, and it's pretty fun here. 
-                    I'm all about Python, cloud tech, and figuring out how to make machines a little more helpful. When I'm not at my desk, I'm probably drowned in a novel, exploring the city or looking for the best coffee in Chicago. 
-                    Let's build the future (or just chat about it). Looking for summer '26 internships!
+                <p class="pixel-intro">
+                    Hey, it's Suchitra...
                 </p>
-                <br>
+                <p class="body-text">
+                    I'm a computer science master's student at Illinois Tech who loves building things from my imagination.
+                    If I think about something, I'll probably try coding it. My background is in software engineering,
+                    but I've fallen down the AI rabbit hole, and it's pretty fun here.
+                    I'm all about Python, cloud tech, and figuring out how to make machines a little more helpful.
+                    When I'm not at my desk, I'm probably drowned in a novel, exploring the city or looking for the
+                    best coffee in Chicago. Let's build the future (or just chat about it).
+                    <br><br>
+                    <span class="green">► STATUS: Looking for Summer '26 Internships!</span>
+                </p>
                 <div class="tech-stack-tags">
                     <span class="tech-stack-tag">Python</span>
                     <span class="tech-stack-tag">Jupyter</span>
@@ -56,267 +103,330 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="about-me-image.jpg" alt="Suchitra Rajkumar">
-            </div>
-            <br>
-        </div>
-    </div>
-    <div class="separator"></div>
-    <div class="experience" id="experience">
-        <br>
-        <br>
-        <h1>Experience</h1>
-        <br>
-        <div class="experience-cards">
-            <div class="experience-card">
-                <h3>PwC</h3>
-                <p>
-                    <strong>Cyber Risk and Regulatory Intern</strong><br>
-                    <small>Feb 2025 - Jul 2025</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-angular-plain"></i>
-                    <i class="devicon-typescript-original"></i>
-                    <i class="devicon-amazonwebservices-plain"></i>
-                    <i class="devicon-github-original"></i>
+                <div class="image-frame">
+                    <img src="about-me-image.jpg" alt="Suchitra Rajkumar">
                 </div>
-                <p>
-                    During my time at PwC, I was part of the development team building a dedicated financial risk application for Capital One. 
-                    I spent my days in the codebase, building out internal Angular dashboards and automating reporting systems to streamline how the team handled regulatory data. 
-                    To keep the project moving fast, I managed our cloud infrastructure using AWS and set up GitHub actions for CI/CD, ensuring our deployments were stable and secure. 
-                    It was a great experience balancing quantitative framework analysis with real-world software engineering for a high-profile client.
-                </p>
-            </div>
-            <div class="experience-card">
-                <h3>vTitan Corporation Pvt Ltd (Zoho)</h3>
-                <p>
-                    <strong>Full Stack Development Intern</strong><br>
-                    <small>Jul 2024</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-react-plain"></i>
-                    <i class="devicon-nodejs-plain"></i>
-                    <i class="devicon-mysql-plain"></i>
-                    <i class="devicon-java-plain"></i>
-                    <i class="devicon-spring-original"></i>
-                </div>
-                <p>
-                    During my full-stack internship at vTitan, I focused on building and maintaining a robust application using the Spring Boot and React ecosystem. I spent a lot of my time in the backend, designing RESTful APIs that could handle complex data queries without slowing down. 
-                    Besides just writing code, I was responsible for the full lifecycle, from architecting the MySQL database models to running integration tests and managing the deployment.
-                    It was a hands-on role where I had to ensure that the bridge between the database and the frontend was not only functional but optimized for high performance.
-                </p>
-            </div>
-            <div class="experience-card">
-                <h3>Bluestock Fintech</h3>
-                <p>
-                    <strong>Software Developer Intern</strong><br>
-                    <small>Jul 2024 - Aug 2024</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-html5-plain"></i>
-                    <i class="devicon-bootstrap-plain"></i>
-                    <i class="devicon-django-plain"></i>
-                </div>
-                <p>
-                    I worked on building a responsive financial dashboard that needed to handle data dynamically. I used Django to manage the backend, leveraging its ORM to implement CRUD features that felt seamless for the user. 
-                    A big part of the project was figuring out how to visualize complex financial data in a way that made sense, so I used Bootstrap and HTML to keep the layout clean and accessible. 
-                    I also spent time optimizing our backend workflows to make sure our real-time analytics stayed fast and responsive, even as the database grew.
-                </p>
-            </div>
-            <div class="experience-card">
-                <h3>PwC - Trainee</h3>
-                <p>
-                    <strong>Cyber Risk and Regulatory Launchpad Program</strong><br>
-                    <small>Feb 2024 - Jul 2024</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-java-plain"></i>
-                    <i class="devicon-oracle-plain"></i>
-                    <i class="devicon-github-plain"></i>
-                </div>
-                <p>
-                    I spent six months in the Launchpad program diving deep into the intersection of software development and cybersecurity. 
-                    My focus was split between mastering OOP principles in Python and Java and learning how to manage complex data structures within Oracle SQL. 
-                    Beyond the coding, I gained a practical understanding of threat analysis and secure coding practices, using Git and GitHub to collaborate on projects while implementing CI/CD basics. 
-                    It was an intensive period of transforming theoretical security concepts into hands-on technical skills.
-                </p>
-            </div>
-            <div class="experience-card">
-                <h3>Cognifyz Technologies</h3>
-                <p>
-                    <strong>Python Development Intern</strong><br>
-                    <small>Jul 2023 - Aug 2023</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
-                </div>
-                <p>
-                    I focused on the core development of python-based applications, using various libraries to build out essential features and logic. 
-                    Most of my work involved the practical side of programming, handling data, ensuring different modules worked together correctly, and refining the overall application flow. 
-                    I spent a lot of time debugging and testing my code to make sure everything was reliable, focusing on making the scripts more efficient and ensuring the final product performed exactly as intended.
-                </p>
-            </div>
-            <div class="experience-card">
-                <h3>LetsGrowMore</h3>
-                <p>
-                    <strong>Java Development Intern</strong><br>
-                    <small>Jul 2023 - Aug 2023</small>
-                </p>
-                <div class="tech-stack">
-                    <i class="devicon-java-plain"></i>
-                    <i class="devicon-github-plain"></i>
-                </div>
-                <p>
-                    At LetsGrowMore, I worked on enhancing Java-based modules by applying core OOP principles to write cleaner, more efficient code. 
-                    I used Git for version control to manage my updates and collaborated with the team to integrate new features into the existing system. 
-                    A big part of the experience was the iterative process of debugging and unit testing, which helped me understand how to optimize application performance and ensure that every module was stable before deployment.
-                </p>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-    </div>
-    <div class="separator"></div>
-    <div class="projects" id="projects">
-        <br>
-        <br>
-        <h1>Projects</h1>
-        <br>
-        <div class="project-filter-container">
-            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-            <button class="filter-btn" onclick="filterProjects('ai')">Artificial Intelligence</button>
-            <button class="filter-btn" onclick="filterProjects('fullstack')">Full Stack</button>
-            <button class="filter-btn" onclick="filterProjects('database')">Database</button>
-            <button class="filter-btn" onclick="filterProjects('analytics')">Data Analytics</button>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- Skills / Inventory -->
+    <section class="skills-section" id="skills">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 02</span>
+            <h2 class="section-title">INVENTORY</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category pixel-card scroll-reveal">
+                <h3 class="skill-cat-title">> LANGUAGES</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-icon"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-icon"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+                    <div class="skill-icon"><i class="devicon-typescript-plain colored"></i><span>TS</span></div>
+                    <div class="skill-icon"><i class="devicon-c-plain"></i><span>C</span></div>
+                </div>
+            </div>
+            <div class="skill-category pixel-card scroll-reveal">
+                <h3 class="skill-cat-title">> FRONTEND</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon"><i class="devicon-react-original colored"></i><span>React</span></div>
+                    <div class="skill-icon"><i class="devicon-angular-plain colored"></i><span>Angular</span></div>
+                    <div class="skill-icon"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+                    <div class="skill-icon"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind</span></div>
+                    <div class="skill-icon"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+                    <div class="skill-icon"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+                </div>
+            </div>
+            <div class="skill-category pixel-card scroll-reveal">
+                <h3 class="skill-cat-title">> BACKEND</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                    <div class="skill-icon"><i class="devicon-express-original"></i><span>Express</span></div>
+                    <div class="skill-icon"><i class="devicon-spring-original colored"></i><span>Spring</span></div>
+                    <div class="skill-icon"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                    <div class="skill-icon"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-icon"><i class="devicon-oracle-plain colored"></i><span>Oracle</span></div>
+                </div>
+            </div>
+            <div class="skill-category pixel-card scroll-reveal">
+                <h3 class="skill-cat-title">> AI &amp; DATA</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon"><i class="devicon-tensorflow-original colored"></i><span>TF</span></div>
+                    <div class="skill-icon"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
+                    <div class="skill-icon"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
+                    <div class="skill-icon"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+                    <div class="skill-icon"><i class="devicon-matplotlib-plain colored"></i><span>MPL</span></div>
+                </div>
+            </div>
+            <div class="skill-category pixel-card scroll-reveal">
+                <h3 class="skill-cat-title">> CLOUD &amp; TOOLS</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                    <div class="skill-icon"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                    <div class="skill-icon"><i class="devicon-vitejs-plain colored"></i><span>Vite</span></div>
+                    <div class="skill-icon"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- Experience / Mission Log -->
+    <section class="experience" id="experience">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 03</span>
+            <h2 class="section-title">MISSION LOG</h2>
+        </div>
+        <div class="timeline">
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">FEB 2025 — JUL 2025</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>PwC</h3>
+                    <p class="role-title">Cyber Risk and Regulatory Intern</p>
+                    <div class="tech-stack">
+                        <i class="devicon-angular-plain colored"></i>
+                        <i class="devicon-typescript-original colored"></i>
+                        <i class="devicon-amazonwebservices-plain colored"></i>
+                        <i class="devicon-github-original"></i>
+                    </div>
+                    <p class="body-text">During my time at PwC, I was part of the development team building a dedicated financial risk application for Capital One.
+                        I spent my days in the codebase, building out internal Angular dashboards and automating reporting systems to streamline how the team handled regulatory data.
+                        To keep the project moving fast, I managed our cloud infrastructure using AWS and set up GitHub Actions for CI/CD, ensuring our deployments were stable and secure.
+                        It was a great experience balancing quantitative framework analysis with real-world software engineering for a high-profile client.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">JUL 2024</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>vTitan Corporation Pvt Ltd (Zoho)</h3>
+                    <p class="role-title">Full Stack Development Intern</p>
+                    <div class="tech-stack">
+                        <i class="devicon-react-plain colored"></i>
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                        <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-spring-original colored"></i>
+                    </div>
+                    <p class="body-text">During my full-stack internship at vTitan, I focused on building and maintaining a robust application using the Spring Boot and React ecosystem.
+                        I spent a lot of my time in the backend, designing RESTful APIs that could handle complex data queries without slowing down.
+                        Besides just writing code, I was responsible for the full lifecycle, from architecting the MySQL database models to running integration tests and managing the deployment.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">JUL — AUG 2024</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>Bluestock Fintech</h3>
+                    <p class="role-title">Software Developer Intern</p>
+                    <div class="tech-stack">
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <i class="devicon-django-plain colored"></i>
+                    </div>
+                    <p class="body-text">I worked on building a responsive financial dashboard that needed to handle data dynamically. I used Django to manage the backend, leveraging its ORM to implement CRUD features that felt seamless for the user.
+                        A big part of the project was figuring out how to visualize complex financial data in a way that made sense, so I used Bootstrap and HTML to keep the layout clean and accessible.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">FEB — JUL 2024</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>PwC — Trainee</h3>
+                    <p class="role-title">Cyber Risk and Regulatory Launchpad Program</p>
+                    <div class="tech-stack">
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-oracle-plain colored"></i>
+                        <i class="devicon-github-plain"></i>
+                    </div>
+                    <p class="body-text">I spent six months in the Launchpad program diving deep into the intersection of software development and cybersecurity.
+                        My focus was split between mastering OOP principles in Python and Java and learning how to manage complex data structures within Oracle SQL.
+                        Beyond the coding, I gained a practical understanding of threat analysis and secure coding practices.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">JUL — AUG 2023</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>Cognifyz Technologies</h3>
+                    <p class="role-title">Python Development Intern</p>
+                    <div class="tech-stack">
+                        <i class="devicon-python-plain colored"></i>
+                    </div>
+                    <p class="body-text">I focused on the core development of Python-based applications, using various libraries to build out essential features and logic.
+                        I spent a lot of time debugging and testing my code to make sure everything was reliable, focusing on making the scripts more efficient and ensuring the final product performed exactly as intended.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">JUL — AUG 2023</span>
+                <div class="experience-card pixel-card">
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>LetsGrowMore</h3>
+                    <p class="role-title">Java Development Intern</p>
+                    <div class="tech-stack">
+                        <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-github-plain"></i>
+                    </div>
+                    <p class="body-text">At LetsGrowMore, I worked on enhancing Java-based modules by applying core OOP principles to write cleaner, more efficient code.
+                        I used Git for version control to manage my updates and collaborated with the team to integrate new features into the existing system.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- Projects / Completed Quests -->
+    <section class="projects" id="projects">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 04</span>
+            <h2 class="section-title">COMPLETED QUESTS</h2>
+        </div>
+        <div class="project-filter-container scroll-reveal">
+            <button class="filter-btn active" onclick="filterProjects('all')">ALL</button>
+            <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
+            <button class="filter-btn" onclick="filterProjects('fullstack')">FULL STACK</button>
+            <button class="filter-btn" onclick="filterProjects('database')">DATABASE</button>
+            <button class="filter-btn" onclick="filterProjects('analytics')">ANALYTICS</button>
         </div>
         <div class="projects-cards">
-            <div class="projects-card" data-category="ai">
+            <div class="projects-card pixel-card scroll-reveal" data-category="ai">
+                <div class="quest-badge">QUEST</div>
                 <h3>RuralReach</h3>
                 <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-tensorflow-original"></i>
-                    <i class="devicon-numpy-plain"></i>
-                    <i class="devicon-pandas-plain"></i>
-                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-tensorflow-original colored"></i>
+                    <i class="devicon-numpy-plain colored"></i>
+                    <i class="devicon-pandas-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">DNN</span>
                     <span class="project-tag">Contextual AI</span>
                 </div>
-                <p>This project was all about making AI understand context. Me and my friend built a deep learning system that doesn't just look at raw data, but also considers the "why" and "where", like environmental and situational cues, to predict behaviors more accurately. 
-                    We handled the entire pipeline ourselves, from engineering the features to training the neural networks, making sure the model stayed sharp even when the situation changed.</p>
+                <p class="body-text">Built a deep learning system that doesn't just look at raw data, but also considers the "why" and "where" — environmental and situational cues — to predict behaviors more accurately. Handled the entire pipeline from feature engineering to neural network training.</p>
             </div>
-            <div class="projects-card" data-category="analytics">
+            <div class="projects-card pixel-card scroll-reveal" data-category="analytics">
+                <div class="quest-badge">QUEST</div>
                 <h3>NBA Match Tracker</h3>
                 <div class="tech-stack">
-                    <i class="devicon-react-original"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-tailwindcss-plain"></i>
-                    <i class="devicon-vitejs-plain"></i>
+                    <i class="devicon-react-original colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
+                    <i class="devicon-tailwindcss-plain colored"></i>
+                    <i class="devicon-vitejs-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Data Visualization</span>
+                    <span class="project-tag">Data Viz</span>
                     <span class="project-tag">API Integration</span>
                 </div>
-                <p>
-                    Tired of clunky sports sites, I built this dashboard to be a snappy, minimal way to check NBA scores. 
-                    It hits the balldontlie API for live game data and uses Recharts to turn raw box scores into visual trends. 
-                    It was a great excuse to play with a high-performance React/Vite stack while keeping tabs on the league, complete with glassy UI cards and responsive filters for the ultimate fan experience.
-                </p>
-                <a href="https://github.com/suchitra0806/nab-tracker" class="project-button">View Project</a>
+                <p class="body-text">Tired of clunky sports sites, I built this dashboard to be a snappy, minimal way to check NBA scores. Hits the balldontlie API for live game data and uses Recharts to turn raw box scores into visual trends.</p>
+                <a href="https://github.com/suchitra0806/nab-tracker" class="btn-pixel secondary sm">► VIEW</a>
             </div>
-            <div class="projects-card" data-category="ai">
+            <div class="projects-card pixel-card scroll-reveal" data-category="ai">
+                <div class="quest-badge">QUEST</div>
                 <h3>Semantic Talent Indexer</h3>
                 <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-python-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">NLP</span>
                     <span class="project-tag">Ollama</span>
-                    <span class="project-tag">Semantic Search</span>
+                    <span class="project-tag">RAG</span>
                 </div>
-                <p>This is my take on making hiring smarter and more secure. I built a RAG (retrieval-augmented generation) system that uses semantic search to find the best talent, moving way beyond basic keyword matching. I did the work of setting up a local inference pipeline using Ollama so that all the sensitive candidate data stays private and on-premises. 
-                    It was a huge win in showing how we can use large language models (LLMs) to understand the actual context of someone's career, not just their job titles.</p>
-                <a href="https://github.com/suchitra0806/semantic-talent-indexer" class="project-button">View Project</a>
+                <p class="body-text">Built a RAG system that uses semantic search to find the best talent, moving beyond keyword matching. Set up a local inference pipeline using Ollama so all sensitive candidate data stays private and on-premises.</p>
+                <a href="https://github.com/suchitra0806/semantic-talent-indexer" class="btn-pixel secondary sm">► VIEW</a>
             </div>
-            <div class="projects-card" data-category="ai">
+            <div class="projects-card pixel-card scroll-reveal" data-category="ai">
+                <div class="quest-badge">QUEST</div>
                 <h3>HealthPredict</h3>
                 <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-jupyter-plain"></i>
-                    <i class="devicon-pandas-plain"></i>
-                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-jupyter-plain colored"></i>
+                    <i class="devicon-pandas-plain colored"></i>
+                    <i class="devicon-matplotlib-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">Healthcare AI</span>
-                    <span class="project-tag">Patient Care</span>
                     <span class="project-tag">Predictive Analytics</span>
                 </div>
-                <p>This project uses machine learning to predict if a patient is likely to miss their medical appointment. I built a random forest model to spot potential "no-shows," helping doctors optimize their schedules and make sure more people actually get the care they need. 
-                    I did the work of balancing the data and prioritizing recall because, at the end of the day, missing a patient who needs help is a bigger deal than a false alarm.</p>
-                <a href="https://github.com/suchitra0806/med-no-show-prediction" class="project-button">View Project</a>
+                <p class="body-text">Uses machine learning to predict if a patient is likely to miss their medical appointment. Built a random forest model prioritizing recall — missing a patient who needs help is a bigger deal than a false alarm.</p>
+                <a href="https://github.com/suchitra0806/med-no-show-prediction" class="btn-pixel secondary sm">► VIEW</a>
             </div>
-            <div class="projects-card" data-category="analytics">
+            <div class="projects-card pixel-card scroll-reveal" data-category="analytics">
+                <div class="quest-badge">QUEST</div>
                 <h3>Weather Analysis</h3>
                 <div class="tech-stack">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-jupyter-plain"></i>
-                    <i class="devicon-pandas-plain"></i>
-                    <i class="devicon-matplotlib-plain"></i>
+                    <i class="devicon-python-plain colored"></i>
+                    <i class="devicon-jupyter-plain colored"></i>
+                    <i class="devicon-pandas-plain colored"></i>
+                    <i class="devicon-matplotlib-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Exploratory Data Analysis</span>
+                    <span class="project-tag">EDA</span>
                 </div>
-                <p>This project started with a massive, messy pile of atmospheric data and a lot of questions. I built a Python pipeline to clean everything up and get it ready for some serious time-series analysis. I visualized using Matplotlib and Seaborn to see if I could spot seasonal trends or weird atmospheric shifts. 
-                    It was basically me playing detective with data to find patterns and anomalies that aren't obvious at first glance.</p>
-                <a href="https://github.com/suchitra0806/EDA-On-Weather-Dataset" class="project-button">View Project</a>
+                <p class="body-text">Started with a massive pile of atmospheric data and built a Python pipeline to clean everything up for time-series analysis. Visualized using Matplotlib and Seaborn to spot seasonal trends and atmospheric anomalies.</p>
+                <a href="https://github.com/suchitra0806/EDA-On-Weather-Dataset" class="btn-pixel secondary sm">► VIEW</a>
             </div>
-            <div class="projects-card" data-category="ai">
+            <div class="projects-card pixel-card scroll-reveal" data-category="ai">
+                <div class="quest-badge">QUEST</div>
                 <h3>Explain</h3>
                 <div class="tech-stack">
                     <i class="devicon-nextjs-original"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-tailwindcss-plain"></i>
-                    <i class="devicon-openai-plain"></i>
+                    <i class="devicon-typescript-plain colored"></i>
+                    <i class="devicon-tailwindcss-plain colored"></i>
+                    <i class="devicon-openai-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Artificial Intelligence</span>
+                    <span class="project-tag">AI</span>
                     <span class="project-tag">EdTech</span>
-                    <span class="project-tag">Data Visualization</span>
                 </div>
-                <p>
-                    Math shouldn't be intimidating. I built Explain to act as a universal translator for complex science, taking "scary" formulas like Navier-Stokes or Schrödinger and breaking them into plain English. 
-                    It uses a high-contrast minimalist interface where AI-driven explanations meet vibrant, animated visualizations, turning abstract symbols into something you can actually see and understand.
-                </p>
-                <a href="https://github.com/suchitra0806/equations" class="project-button">View Project</a>
+                <p class="body-text">Math shouldn't be intimidating. Built a universal translator for complex science — takes scary formulas like Navier-Stokes or Schrödinger and breaks them into plain English with AI-driven explanations and animated visualizations.</p>
+                <a href="https://github.com/suchitra0806/equations" class="btn-pixel secondary sm">► VIEW</a>
             </div>
-            <div class="projects-card" data-category="fullstack">
+            <div class="projects-card pixel-card scroll-reveal" data-category="fullstack">
+                <div class="quest-badge">QUEST</div>
                 <h3>Student Application</h3>
                 <div class="tech-stack">
-                    <i class="devicon-java-plain"></i>
-                    <i class="devicon-spring-plain"></i>
-                    <i class="devicon-react-plain"></i>
-                    <i class="devicon-mysql-plain"></i>
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-spring-plain colored"></i>
+                    <i class="devicon-react-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
                     <i class="devicon-github-original"></i>
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">JSON</span>
                     <span class="project-tag">REST API</span>
+                    <span class="project-tag">Full Stack</span>
                 </div>
-                <p>This is a full-stack student management system I built to bridge the gap between backend and frontend. I wanted to show how a Spring Boot API and a React UI can work together perfectly on a single port. 
-                    I did the whole thing from scratch, designing the RESTful architecture, building the component-based interface, and making sure the state management was smooth for every add, update, and delete.</p>
-                <a href="https://github.com/suchitra0806/Student-application-frontend" class="project-button">View Frontend Code</a>
-                <a href="https://github.com/suchitra0806/Student-application-backend" class="project-button">View Backend Code</a>
+                <p class="body-text">Full-stack student management system showing how a Spring Boot API and React UI can work together perfectly on a single port. Built from scratch — RESTful architecture, component-based UI, smooth state management.</p>
+                <a href="https://github.com/suchitra0806/Student-application-frontend" class="btn-pixel secondary sm">► FRONTEND</a>
+                <a href="https://github.com/suchitra0806/Student-application-backend" class="btn-pixel secondary sm">► BACKEND</a>
             </div>
-            <div class="projects-card" data-category="database">
+            <div class="projects-card pixel-card scroll-reveal" data-category="database">
+                <div class="quest-badge">QUEST</div>
                 <h3>B+-Tree Index Manager</h3>
                 <div class="tech-stack">
                     <i class="devicon-c-plain"></i>
@@ -324,13 +434,12 @@
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">File I/O</span>
-                    <span class="project-tag">Memory Management</span>
-                    <span class="project-tag">Data Structures</span>
+                    <span class="project-tag">Memory Mgmt</span>
                 </div>
-                <p>This was probably one of my biggest coding challenges yet. I built a fully functional b+-tree index manager in c to help a database find and retrieve records without breaking a sweat. I did the heavy lifting of mapping tree nodes to disk pages and implementing all the core logic, like splits, merges, and range scans. 
-                    I also integrated it with a custom buffer manager to make sure the whole system was fast, efficient, and actually persistent.</p>
+                <p class="body-text">Built a fully functional B+-tree index manager in C, mapping tree nodes to disk pages and implementing all core logic — splits, merges, and range scans. Integrated with a custom buffer manager for speed and persistence.</p>
             </div>
-            <div class="projects-card" data-category="database">
+            <div class="projects-card pixel-card scroll-reveal" data-category="database">
+                <div class="quest-badge">QUEST</div>
                 <h3>Record Manager</h3>
                 <div class="tech-stack">
                     <i class="devicon-c-plain"></i>
@@ -338,88 +447,81 @@
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">File I/O</span>
-                    <span class="project-tag">Memory Management</span>
                     <span class="project-tag">Data Structures</span>
                 </div>
-                <p>I wanted to dive deep into the guts of a database. I built a record manager in C from the ground up to handle data tables with fixed schemas. I did the hard work of implementing the core logic, like how records are inserted, deleted, and scanned, using my own custom data structures. 
-                    I designed the page layouts and integrated a buffer manager to make sure accessing data was as fast and efficient as possible.</p>
-            </div>
-        </div> 
-        <br>
-        <br>
-        <br>
-    </div>
-    <div class="separator"></div>
-    <div class="extracurriculars" id="extracurriculars">
-        <br>
-        <br>
-        <h1>Extracurriculars</h1>
-        <br>
-        <div class="extracurriculars-cards">
-            <div class="extracurriculars-card">
-                <h3>TechNews @ Illinois Tech</h3>
-                <p>
-                    <strong>Senior Writer & Copy Editor</strong><br>
-                    <small>Jan 2026 - Present</small>
-                    <br>
-                    <br>
-                    <strong>General Writer</strong><br>
-                    <small>Aug 2025 - Dec 2025</small>
-                </p>
-            </div>
-            <div class="extracurriculars-card">
-                <h3>IEEE @ IIT Student Chapter</h3>
-                <p>
-                    <strong>Event Manager</strong><br>
-                    <small>Oct 2025 - Present</small>
-                </p>
-            </div>
-            <div class="extracurriculars-card">
-                <h3>Association for Computing Machinery - Women (ACM-W)</h3>
-                <p>
-                    <strong>Events Chair</strong><br>
-                    <small>Feb 2026 - Present</small>
-                </p>
-            </div>
-            <div class="extracurriculars-card">
-                <h3>Product Management Club</h3>
-                <p>
-                    <strong>Event Manager</strong><br>
-                    <small>Feb 2026 - Present</small>
-                </p>
-            </div>
-            <div class="extracurriculars-card">
-                <h3>Crescent Literary Society</h3>
-                <p>
-                    <strong>President</strong><br>
-                    <small>Jun 2024 - May 2025</small>
-                </p>
-            </div>
-            <div class="extracurriculars-card">
-                <h3>Crescent Line (Newsletter)</h3>
-                <p>
-                    <strong>Editor-In-Charge</strong><br>
-                    <small>Aug 2023 - Feb 2024</small>
-                </p>
+                <p class="body-text">Built a record manager in C from the ground up to handle data tables with fixed schemas. Implemented insert, delete, and scan logic with custom data structures, page layouts, and a buffer manager for fast data access.</p>
             </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="separator"></div>
-    <div class="contact" id="contact">
-        <h2>Let's connect!</h2>
-        <p>Send me an email to know more about me or discuss opportunities.</p>
-        <a href="mailto:suchiraj0806@gmail.com" class="email-button">Email Me</a>
-    </div>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- Extracurriculars / Guild Hall -->
+    <section class="extracurriculars" id="extracurriculars">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 05</span>
+            <h2 class="section-title">GUILD HALL</h2>
+        </div>
+        <div class="extracurriculars-cards">
+            <div class="extracurriculars-card award-card pixel-card scroll-reveal">
+                <div class="award-badge">★ ACHIEVEMENT UNLOCKED</div>
+                <h3>Chicago Startup Weekend 2026</h3>
+                <p class="role-title">1st Place Winner &nbsp;·&nbsp; 2026</p>
+                <p class="body-text">Won the Chicago Startup Weekend competition — pitched and built a startup concept from zero to final pitch in 54 hours alongside a team.</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>TechNews @ Illinois Tech</h3>
+                <p class="role-title">Senior Writer &amp; Copy Editor</p>
+                <p class="body-text-sm">Jan 2026 – Present</p>
+                <p class="role-title">General Writer</p>
+                <p class="body-text-sm">Aug 2025 – Dec 2025</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>IEEE @ IIT Student Chapter</h3>
+                <p class="role-title">Event Manager</p>
+                <p class="body-text-sm">Oct 2025 – Present</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>ACM-W</h3>
+                <p class="role-title">Events Chair</p>
+                <p class="body-text-sm">Feb 2026 – Present</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>Product Management Club</h3>
+                <p class="role-title">Event Manager</p>
+                <p class="body-text-sm">Feb 2026 – Present</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>Crescent Literary Society</h3>
+                <p class="role-title">President</p>
+                <p class="body-text-sm">Jun 2024 – May 2025</p>
+            </div>
+            <div class="extracurriculars-card pixel-card scroll-reveal">
+                <h3>Crescent Line (Newsletter)</h3>
+                <p class="role-title">Editor-In-Charge</p>
+                <p class="body-text-sm">Aug 2023 – Feb 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator"><span>══════════════════════════════════════════</span></div>
+
+    <!-- Contact / Comms Terminal -->
+    <section class="contact" id="contact">
+        <div class="section-header scroll-reveal">
+            <span class="level-tag">// LEVEL 06</span>
+            <h2 class="section-title">COMMS TERMINAL</h2>
+        </div>
+        <div class="contact-content scroll-reveal">
+            <p class="body-text">Send me an email to know more about me or discuss opportunities.</p>
+            <a href="mailto:suchiraj0806@gmail.com" class="btn-pixel primary lg">► SEND MESSAGE</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span class="body-text-sm">SUCHITRA_RAJKUMAR.EXE &nbsp;—&nbsp; <span class="green">ONLINE</span> &nbsp;█</span>
+    </footer>
+
     <script src="script.js"></script>
-    <!-- <div class="mode-toggle-container">
-    <div class="toggle-track">
-        <div class="toggle-thumb"></div>
-        <button class="toggle-btn active" onclick="setMode('tech')">Technical</button>
-        <button class="toggle-btn" onclick="setMode('non-tech')">Personal</button>
-    </div> -->
-</div>
 </body>
 </html>
