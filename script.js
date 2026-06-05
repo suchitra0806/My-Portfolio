@@ -32,7 +32,7 @@ const bootLines = [
     '> CLASS....: SOFTWARE ENGINEER',
     '> SPEC.....: AI + FULL STACK',
     '> BASE.....: ILLINOIS TECH, CHICAGO',
-    '> QUEST....: INTERNING @ FULCRUM DEFENSE',
+    '> QUEST....: INTERNING @ FULCRUM DEFENSE INC.',
     '> STATUS...: [ ONLINE ]',
 ];
 
