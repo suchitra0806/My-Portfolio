@@ -634,6 +634,8 @@ body {
     opacity: 0.8;
 }
 .mission-status::before { content: '✔ '; }
+.mission-status.active { color: var(--green); opacity: 1; animation: blink 1s step-end infinite; }
+.mission-status.active::before { content: '► '; }
 
 .experience-card h3 {
     font-family: var(--font-pixel);
