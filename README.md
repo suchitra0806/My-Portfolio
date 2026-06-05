@@ -1,9 +1,19 @@
-# 🌐 My Portfolio
+# SUCHITRA_RAJKUMAR.EXE
 
-Welcome to my personal portfolio website! This project showcases my work, skills, and interests through a clean, responsive design built with HTML and CSS.
+Personal portfolio — built with vanilla HTML, CSS, and JavaScript.
 
-## ✨ Features
-- Custom homepage with personal introduction
-- About Me section with image
-- Responsive layout for desktop and mobile
-- Styled with modern CSS
+## Stack
+- HTML / CSS / JS — no frameworks, no build step
+- Devicons for skill icons
+- Press Start 2P + VT323 (Google Fonts) for the pixel aesthetic
+
+## Sections
+- **Player Profile** — about me
+- **Inventory** — skills
+- **Mission Log** — experience
+- **Completed Quests** — projects
+- **Guild Hall** — extracurriculars
+- **Comms Terminal** — contact
+
+## Running locally
+Open `index.html` in a browser. That's it.
