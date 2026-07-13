@@ -2,6 +2,8 @@
 
 Personal portfolio — built with vanilla HTML, CSS, and JavaScript.
 
+**Live: [suchitra0806.github.io/My-Portfolio](https://suchitra0806.github.io/My-Portfolio/)**
+
 ## Stack
 - HTML / CSS / JS — no frameworks, no build step
 - Devicons for skill icons
