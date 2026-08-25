@@ -84,7 +84,7 @@
                     When I'm not at my desk, I'm probably drowned in a novel, exploring the city or looking for the
                     best coffee in Chicago. Let's build the future (or just chat about it).
                     <br><br>
-                    <span class="green">► STATUS: Interning @ Fulcrum Defense Inc.</span>
+                    <span class="green">► STATUS: Fulcrum Defense internship complete — open to new quests</span>
                 </p>
             </div>
             <div class="about-image">
@@ -173,10 +173,10 @@
 
             <div class="timeline-item scroll-reveal">
                 <div class="timeline-dot"></div>
-                <span class="timeline-date">MAY 2026 — PRESENT</span>
+                <span class="timeline-date">MAY 2026 — AUG 2026</span>
                 <div class="experience-card pixel-card">
-                    <div class="mission-status active">ACTIVE MISSION</div>
-                    <h3>Fulcrum Defense Inc.</h3>
+                    <div class="mission-status">MISSION COMPLETE</div>
+                    <h3>Fulcrum Defense</h3>
                     <p class="role-title">Technical Intern — Solution Architecture &amp; Platform Engineering</p>
                     <div class="tech-stack">
                         <i class="devicon-python-plain colored"></i>
@@ -184,9 +184,9 @@
                         <i class="devicon-docker-plain colored"></i>
                         <i class="devicon-github-original"></i>
                     </div>
-                    <p class="body-text">Supporting live client demos of the Fulcrum AI Platform to DoD program offices and prime contractors, translating customer feedback into actionable product requirements.
-                        Contributing to solution architecture, testing, and documentation for the DARC (Defense Agent Runtime &amp; Coordination) runtime in Agile sprint cadence with the CTO and engineering team.
-                        Collaborating on vendor/partner ecosystems to advance platform certifications including DoD IL5 accreditation pathway.</p>
+                    <p class="body-text">Shipped 51 merged PRs over ~11 weeks on fulcrum-gateway, the Python CLI powering multi-agent communication across Fulcrum's platform — letting agents, connectors, and human operators talk to the same backend safely and reliably.
+                        Hardened security by closing a SQL-injection-shaped gap in the report generator's AST safety layer and adding Retry-After-aware rate-limit handling to the internal API client; improved reliability by fixing cross-process race conditions with file locking, bounding runaway respawn loops, and making agent sessions survive daemon restarts.
+                        Debugged the HTTP MCP adapter and SSE event parsing so connectors could actually reach real MCP servers, built recurring task scheduling per an internal ADR, and fixed a CI version-gate regex that was silently skipping every release publish.</p>
                 </div>
             </div>
 
