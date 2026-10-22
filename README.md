@@ -1,21 +1,21 @@
-# SUCHITRA_RAJKUMAR.EXE
+# SUCHITRA_RAJKUMAR
 
-Personal portfolio — built with vanilla HTML, CSS, and JavaScript.
+Personal portfolio: a stack of paper folders. Open a folder to read that chapter.
 
 **Live: [suchitra0806.github.io/My-Portfolio](https://suchitra0806.github.io/My-Portfolio/)**
 
-## Stack
-- HTML / CSS / JS — no frameworks, no build step
-- Devicons for skill icons
-- Press Start 2P + VT323 (Google Fonts) for the pixel aesthetic
+## Folders
+Prologue · Profile · Inventory · Mission log · Quests · Guild hall · Contact
 
-## Sections
-- **Player Profile** — about me
-- **Inventory** — skills
-- **Mission Log** — experience
-- **Completed Quests** — projects
-- **Guild Hall** — extracurriculars
-- **Comms Terminal** — contact
+Hovering a folder shows its record card. Folders turn black once read. Each chapter has its own link (`/#/quests`), and `Esc` returns to the stack.
+
+## Stack
+- Vanilla HTML / CSS / JS, no frameworks and no build step
+- Hash routing, so it works on GitHub Pages as-is
+- Devicons for skill icons; IBM Plex Mono and Lora from Google Fonts
 
 ## Running locally
-Open `index.html` in a browser. That's it.
+```
+python3 -m http.server 8800
+```
+Then open http://localhost:8800.
